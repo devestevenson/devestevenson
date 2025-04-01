@@ -1,16 +1,16 @@
 ---
 const dataServives = [
     {
-        title: "Servicio",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        title: "Diseño UX/UI",
+        description: "Diseño de interfaces de usuario atractivas y funcionales para aplicaciones web y móviles."
     },
     {
-        title: "Servicio",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        title: "Desarrollo Web",
+        description: "Desarrollo de sitios web responsivos, utilizando tecnologías como Astro, React, Next.js y Tailwind CSS."
     },
     {
-        title: "Servicio",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        title: "Diseño Social Media",
+        description: "Diseño de contenido visual atractivo y estrategico de marketing digital para redes sociales."
     },
 ];
 ---
@@ -21,8 +21,8 @@ const dataServives = [
         {dataServives.map((service, index) => (
             <li>
                 <div class="accordion-header cursor-pointer flex justify-between items-center py-2" data-index={index}>
-                    <span class="text-2xl font-semibold text-[#202020]">{service.title}</span>
-                    <span class="text-xl text-[#202020] transition-transform duration-300">
+                    <span class="text-2xl font-semibold">{service.title}</span>
+                    <span class="text-xl transition-transform duration-300">
                         <i class="ph ph-caret-down"></i>
                     </span>
                 </div>

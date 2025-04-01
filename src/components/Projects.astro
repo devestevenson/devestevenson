@@ -1,24 +1,29 @@
 ---
 const dataWorks = [
     {
-        title: "Proyecto",
-        link: "https://example.com/project1"
+        title: "pohemaro.com",
+        link: "https://www.pohemaro.com/",
+        tag: "diseño y desarrollo"
     },
     {
-        title: "Proyecto",
-        link: "https://example.com/project2"
+        title: "marmól.com",
+        link: "https://todoenmarmol.com/",
+        tag: "diseño y desarrollo"
     },
     {
-        title: "Proyecto",
-        link: "https://example.com/project3"
+        title: "kernink.com",
+        link: "https://kerninkestudioold.vercel.app/",
+        tag: "diseño y desarrollo"
     },
     {
-        title: "Proyecto",
-        link: "https://example.com/project3"
+        title: "gotour.com",
+        link: "https://gotour13.com/",
+        tag: "desarrollo"
     },
     {
-        title: "Proyecto",
-        link: "https://example.com/project3"
+        title: "codigoc13.com",
+        link: "https://www.codigoc13.com/",
+        tag: "desarrollo"
     }
 ];
 ---
@@ -28,8 +33,11 @@ const dataWorks = [
     <ul class="flex flex-col gap-4">
         {dataWorks.map((work) => (
             <a href={work.link} target="_blank" class="flex justify-between items-center">
-                <span class="text-2xl font-semibold text-[#202020]">{work.title}</span>
-                <span class="text-xl text-[#202020]"><i class="ph ph-arrow-up-right"></i></span>
+                <div>
+                    <span class="text-2xl font-semibold">{work.title},</span>
+                    <span class="text-sm text-[#888888]">({work.tag})</span>
+                </div>
+                <span class="text-xl"><i class="ph ph-arrow-up-right"></i></span>
             </a>
         ))}
 </section>
