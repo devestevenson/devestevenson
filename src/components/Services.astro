@@ -1,0 +1,78 @@
+---
+const dataServives = [
+    {
+        title: "Servicio",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+        title: "Servicio",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+        title: "Servicio",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+];
+---
+
+<section class="flex flex-col gap-5 p-5 sm:p-[50px] border-b border-t border-[#f0f0f0]">
+    <h2 class="text-2xl font-extrabold text-[#888888] -tracking-wide">Servicios disponibles</h2>
+    <ul class="flex flex-col gap-2.5">
+        {dataServives.map((service, index) => (
+            <li>
+                <div class="accordion-header cursor-pointer flex justify-between items-center py-2" data-index={index}>
+                    <span class="text-2xl font-semibold text-[#202020]">{service.title}</span>
+                    <span class="text-xl text-[#202020] transition-transform duration-300">
+                        <i class="ph ph-caret-down"></i>
+                    </span>
+                </div>
+                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 opacity-0">
+                    <p class="text-base font-medium py-2 text-[#888888]">{service.description}</p>
+                </div>
+            </li>
+        ))}
+    </ul>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+        
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling as HTMLElement;
+                const icon = header.querySelector('i');
+                
+                // Cerrar todos los acordeones
+                document.querySelectorAll('.accordion-content').forEach(item => {
+                    if (item !== content) {
+                        (item as HTMLElement).style.maxHeight = '0';
+                        (item as HTMLElement).classList.remove('opacity-100');
+                        (item as HTMLElement).classList.add('opacity-0');
+                        const headerIcon = (item as HTMLElement).previousElementSibling?.querySelector('i');
+                        headerIcon?.classList.remove('rotate-180');
+                    }
+                });
+                
+                // Alternar el estado del acordeón actual
+                if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                    content.style.maxHeight = '0';
+                    content.classList.remove('opacity-100');
+                    content.classList.add('opacity-0');
+                    icon?.classList.remove('rotate-180');
+                } else {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    content.classList.remove('opacity-0');
+                    content.classList.add('opacity-100');
+                    icon?.classList.add('rotate-180');
+                }
+            });
+        });
+        
+        // Opcional: Abrir el primer elemento por defecto
+        // if (accordionHeaders.length > 0) {
+        //     accordionHeaders[0].click();
+        // }
+    });
+
+</script>
