@@ -1,33 +1,33 @@
 ---
-const dataServives = [
+const dataSkills = [
     {
-        title: "Diseño UX/UI",
+        title: "Skill",
         description: "Diseño de interfaces de usuario atractivas y funcionales para aplicaciones web y móviles."
     },
     {
-        title: "Desarrollo Web",
+        title: "Skill",
         description: "Desarrollo de sitios web responsivos, utilizando tecnologías como Astro, React, Next.js y Tailwind CSS."
     },
     {
-        title: "Diseño Social Media",
+        title: "Skill",
         description: "Diseño de contenido visual atractivo y estrategico de marketing digital para redes sociales."
     },
 ];
 ---
 
-<section class="flex flex-col gap-5 p-5 sm:p-[50px] border-b border-t border-[#f0f0f0]">
-    <h2 class="text-2xl font-extrabold text-[#888888] -tracking-wide">Servicios disponibles</h2>
-    <ul class="flex flex-col gap-2.5">
-        {dataServives.map((service, index) => (
+<section class="px-[25px] sm:px-[50px] py-[50px] border-t border-b border-[#f0f0f0]">
+    <h2 class="text-xl font-semibold mb-4">Skills</h2>
+    <ul class="">
+        {dataSkills.map((skill, index) => (
             <li>
-                <div class="accordion-header cursor-pointer flex justify-between items-center py-2" data-index={index}>
-                    <span class="text-2xl font-semibold">{service.title}</span>
-                    <span class="text-xl transition-transform duration-300">
+                <div class="accordion-header cursor-pointer flex justify-between items-center py-1" data-index={index}>
+                    <span class="text-base">{skill.title}</span>
+                    <span class="text-base transition-transform duration-300">
                         <i class="ph ph-caret-down"></i>
                     </span>
                 </div>
                 <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 opacity-0">
-                    <p class="text-base font-medium py-2 text-[#888888]">{service.description}</p>
+                    <p class="text-base py-1 text-[#707070]">{skill.description}</p>
                 </div>
             </li>
         ))}

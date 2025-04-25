@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 body {
-    font-family: 'Manrope Variable', sans-serif;
+    font-family: 'Space Grotesk Variable', sans-serif;
     background: #ffffff;
-    color: #404040;
+    color: #303030;
 }
 ::-webkit-scrollbar {
     display: none;

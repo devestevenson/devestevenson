@@ -1,39 +1,46 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-import Navbar from '../components/Navbar.astro';
+import Menubar from '../components/Menubar.astro';
 import Profile from '../components/Profile.astro';
-import Services from '../components/Services.astro';
+import Skills from '../components/Skills.astro';
 import Projects from '../components/Projects.astro';
 import Contact from '../components/Contact.astro';
 import Footbar from '../components/Footbar.astro';
 ---
 
 <Layout>
+
 	<div class="px-4">
 
-		<main class="w-full max-w-[650px] mx-auto border border-[#f0f0f0] flex flex-col gap-[100px]">
+		<main class="w-full max-w-[600px] flex flex-col gap-[100px] mx-auto border border-[#f0f0f0]">
 
-			<div class="w-full">
-				<Navbar />
-			</div>
-			<div class="w-full">
+			<section>
+				<Menubar />
+			</section>
+
+			<section>
 				<Profile />
-			</div>
-			<div class="w-full">
-				<Services />
-			</div>
-			<div class="w-full">
-				<Projects />
-			</div>
-			<div class="w-full">
-				<Contact />
-			</div>
-			<div class="w-full">
-				<Footbar />
-			</div>
+			</section>
 
+			<section>
+				<Skills />
+			</section>
+
+			<section>
+				<Projects />
+			</section>
+
+			<section>
+				<Contact />
+			</section>
+
+			<section>
+				<Footbar />
+			</section>
+			
 		</main>
 
 	</div>
+
 </Layout>
