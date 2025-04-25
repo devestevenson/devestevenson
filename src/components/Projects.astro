@@ -19,10 +19,10 @@ const dataProjects = [
 ---
 
 <section class="px-[25px] sm:px-[50px] py-[50px] border-t border-b border-[#f0f0f0]">
-    <h2 class="text-xl font-semibold mb-4">Proyectos</h2>
+    <h2 class="text-xl font-semibold mb-4 animate-fade-in-up">Proyectos</h2>
     <ul class="">
         {dataProjects.map((project) => (
-            <a href={project.link} target="_blank" class="flex justify-between items-center py-1">
+            <a href={project.link} target="_blank" class="flex justify-between items-center py-1 animate-fade-in-up">
                 <span class="text-base text-[#707070]">{project.title}</span>
                 <span class="text-base"><i class="ph ph-arrow-up-right"></i></span>
             </a>
