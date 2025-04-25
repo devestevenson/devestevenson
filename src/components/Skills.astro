@@ -16,11 +16,11 @@ const dataSkills = [
 ---
 
 <section class="px-[25px] sm:px-[50px] py-[50px] border-t border-b border-[#f0f0f0]">
-    <h2 class="text-xl font-semibold mb-4 animate-fade-in-up">Habilidades</h2>
+    <h2 class="text-xl font-semibold mb-4 animate-fade-in-up animate-duration-200">Habilidades</h2>
     <ul class="">
         {dataSkills.map((skill, index) => (
             <li>
-                <div class="accordion-header cursor-pointer flex justify-between items-center py-1 animate-fade-in-up" data-index={index}>
+                <div class="accordion-header cursor-pointer flex justify-between items-center py-1 animate-fade-in-up animate-duration-[${(index + 2) * 200}ms]" data-index={index}>
                     <span class="text-base text-[#707070] font-medium">{skill.title}</span>
                     <span class="text-base transition-transform duration-300">
                         <i class="ph ph-caret-down"></i>
