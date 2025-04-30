@@ -1,17 +1,17 @@
 ---
 const dataSkills = [
     {
-        title: "Diseño UI*UX",
-        description: "Diseño de interfaces de usuario atractivas y funcionales para aplicaciones web y móviles."
-    },
-    {
         title: "Desarrollo web",
         description: "Desarrollo de sitios web responsivos, utilizando tecnologías como Astro, React, Next.js y Tailwind CSS."
     },
     {
+        title: "Diseño UI/UX",
+        description: "Diseño de interfaces de usuario atractivas y funcionales para aplicaciones web y móviles."
+    },
+    {
         title: "Diseño Social Media",
         description: "Diseño de contenido visual atractivo y estrategico de marketing digital para redes sociales."
-    },
+    }
 ];
 ---
 
@@ -21,7 +21,7 @@ const dataSkills = [
         {dataSkills.map((skill, index) => (
             <li>
                 <div class="accordion-header cursor-pointer flex justify-between items-center py-1" data-index={index}>
-                    <span class="text-base text-[#D0D0D0] font-medium">{skill.title}</span>
+                    <span class="text-base text-[#D0D0D0]">{skill.title}</span>
                     <span class="text-base transition-transform duration-300">
                         <i class="ph ph-caret-down"></i>
                     </span>
