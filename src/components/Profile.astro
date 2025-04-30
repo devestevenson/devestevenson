@@ -1,23 +1,51 @@
 ---
 ---
 
-<section class="grid gap-4 px-[25px] sm:px-[50px] py-[50px] border-t border-b border-[#f0f0f0]">
+<section class="grid gap-4 px-[25px] sm:px-[50px] py-[50px] border-t border-b border-[#262626]">
 
-    <h1 class="text-xl font-bold animate-fade-in-up animate-duration-200">
+    <h1 class="text-xl font-bold profile-title opacity-0 translate-y-4">
         Estevenson,
-        <span class="font-normal text-[#707070]">
+        <span class="font-normal text-[#A1A1A1]">
             Diseñador
         </span>
     </h1>
     
-    <p class="w-full max-w-[370px] sm:max-w-[445px] text-base text-[#707070] animate-fade-in-up animate-duration-400">
+    <p class="w-full max-w-[370px] sm:max-w-[445px] text-base text-[#A1A1A1] profile-description opacity-0 translate-y-4">
         Disfruto diseñar productos y servicios digitales enfocado en mejorar la experiencia del usuario en cada interacción.
     </p>
 
-    <ul class="flex items-center gap-4 animate-fade-in-up animate-duration-600">
-        <a href="https://www.linkedin.com/in/devestevenson/" target="_blank" class="block">Linkedin</a>
-        <a href="https://www.behance.net/devestevenson" target="_blank" class="block">Behance</a>
-        <a href="https://github.com/devestevenson" target="_blank" class="block">Github</a>
+    <ul class="flex items-center gap-4 profile-social opacity-0 translate-y-4">
+        <a href="https://www.linkedin.com/in/devestevenson/" target="_blank" class="block text-[#A1A1A1] hover:text-[#D0D0D0]">Linkedin</a>
+        <a href="https://www.behance.net/devestevenson" target="_blank" class="block text-[#A1A1A1] hover:text-[#D0D0D0]">Behance</a>
+        <a href="https://github.com/devestevenson" target="_blank" class="block text-[#A1A1A1] hover:text-[#D0D0D0]">Github</a>
     </ul>
 
 </section>
+
+<script>
+    import { gsap } from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const profileElements = [
+        '.profile-title',
+        '.profile-description',
+        '.profile-social'
+    ];
+
+    profileElements.forEach((element, index) => {
+        gsap.to(element, {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            delay: index * 0.2,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: element,
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+    });
+</script>

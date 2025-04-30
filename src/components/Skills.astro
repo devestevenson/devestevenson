@@ -15,19 +15,19 @@ const dataSkills = [
 ];
 ---
 
-<section class="px-[25px] sm:px-[50px] py-[50px] border-t border-b border-[#f0f0f0]">
-    <h2 class="text-xl font-semibold mb-4 animate-fade-in-up animate-duration-200">Habilidades</h2>
-    <ul class="">
+<section class="px-[25px] sm:px-[50px] py-[50px] border-t border-b border-[#262626]">
+    <h2 class="text-xl font-semibold mb-4 skills-title opacity-0 translate-y-4">Habilidades</h2>
+    <ul class="skills-list opacity-0 translate-y-4">
         {dataSkills.map((skill, index) => (
             <li>
-                <div class="accordion-header cursor-pointer flex justify-between items-center py-1 animate-fade-in-up animate-duration-[${(index + 2) * 200}ms]" data-index={index}>
-                    <span class="text-base text-[#707070] font-medium">{skill.title}</span>
+                <div class="accordion-header cursor-pointer flex justify-between items-center py-1" data-index={index}>
+                    <span class="text-base text-[#D0D0D0] font-medium">{skill.title}</span>
                     <span class="text-base transition-transform duration-300">
                         <i class="ph ph-caret-down"></i>
                     </span>
                 </div>
                 <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 opacity-0">
-                    <p class="text-sm py-1 text-[#707070]">{skill.description}</p>
+                    <p class="text-sm py-1 text-[#A1A1A1]">{skill.description}</p>
                 </div>
             </li>
         ))}
@@ -35,6 +35,31 @@ const dataSkills = [
 </section>
 
 <script>
+    import { gsap } from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const skillsElements = [
+        '.skills-title',
+        '.skills-list'
+    ];
+
+    skillsElements.forEach((element, index) => {
+        gsap.to(element, {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            delay: index * 0.2,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: element,
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+    });
+
     document.addEventListener('DOMContentLoaded', () => {
         const accordionHeaders = document.querySelectorAll('.accordion-header');
         
