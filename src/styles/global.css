@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body {
-    font-family: 'IBM Plex Sans Variable', sans-serif;
+    font-family: 'Google Sans Code Variable', monospace;
     background: #1A1818;
     color: #FFFFFF;
 }

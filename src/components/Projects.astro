@@ -1,27 +1,13 @@
 ---
 const dataProjects = [
     {
-        title: "Pohemaro",
-        link: "https://www.pohemaro.com",
+        title: "Guiaty",
+        link: "https://www.guiaty.com/",
         tag: "diseño y desarrollo"
     },
+
     {
-        title: "Todo en Mármol",
-        link: "https://todoenmarmol.vercel.app",
-        tag: "diseño y desarrollo"
-    },
-    {
-        title: "Kernink Estudio",
-        link: "https://kerninkestudioold.vercel.app/",
-        tag: "diseño y desarrollo"
-    },
-    {
-        title: "Logofolio",
-        link: "https://kerninkestudio.com",
-        tag: "diseño y desarrollo"
-    },
-    {
-        title: "Snaketor Game",
+        title: "Snaketor",
         link: "https://snaketor.vercel.app",
         tag: "diseño y desarrollo"
     },
@@ -29,8 +15,8 @@ const dataProjects = [
 ---
 
 <section class="px-[25px] sm:px-[50px] py-[50px] border-t border-b border-[#333333]">
-    <h2 class="text-xl font-semibold mb-4 projects-title opacity-0 translate-y-4">Proyectos</h2>
-    <ul class="projects-list opacity-0 translate-y-4">
+    <h2 class="text-xl font-semibold mb-4 projects-title">Proyectos personales</h2>
+    <ul class="">
         {dataProjects.map((project) => (
             <a href={project.link} target="_blank" class="flex justify-between items-center py-1">
                 <span class="text-base text-[#999999] hover:text-[#D0D0D0]">{project.title}</span>
@@ -39,30 +25,3 @@ const dataProjects = [
         ))}
     </ul>
 </section>
-
-<script>
-    import { gsap } from 'gsap';
-    import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-    gsap.registerPlugin(ScrollTrigger);
-
-    const projectsElements = [
-        '.projects-title',
-        '.projects-list'
-    ];
-
-    projectsElements.forEach((element, index) => {
-        gsap.to(element, {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            delay: index * 0.2,
-            ease: 'power2.out',
-            scrollTrigger: {
-                trigger: element,
-                start: 'top 80%',
-                toggleActions: 'play none none reverse'
-            }
-        });
-    });
-</script>
