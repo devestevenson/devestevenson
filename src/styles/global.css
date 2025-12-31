@@ -1,9 +1,12 @@
 @import "tailwindcss";
 
 body {
-    font-family: 'Google Sans Code Variable', monospace;
-    background: #1A1818;
-    color: #FFFFFF;
+    font-family: 'DM Sans Variable', sans-serif;
+    color: #000000;
+    background-color: #F7F9F9;
+    background-image: radial-gradient(rgb(218, 218, 218) 1px, transparent 0);
+    background-size: 30px 30px;
+    background-position: -5px -5px
 }
 ::-webkit-scrollbar {
     display: none;
