@@ -1,13 +1,28 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+    background-color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html.dark {
+    background-color: #0c0d0e;
+    color-scheme: dark;
+}
+
 body {
     font-family: 'DM Sans Variable', sans-serif;
     color: #000000;
-    background-color: #F7F9F9;
-    background-image: radial-gradient(rgb(218, 218, 218) 1px, transparent 0);
-    background-size: 30px 30px;
-    background-position: -5px -5px
+    min-height: 100vh;
+    transition: color 0.3s ease;
 }
+
+html.dark body {
+    color: #ededed;
+}
+
 ::-webkit-scrollbar {
     display: none;
-}
+}
