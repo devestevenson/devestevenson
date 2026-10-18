@@ -1,46 +1,62 @@
 ---
+
 ---
 
 <div class="relative size-36 mx-auto flex items-center justify-center group">
-  <!-- Anillo SVG simulando barra de progreso circular con degradado -->
-  <svg class="absolute inset-0 size-full -rotate-90 pointer-events-none" viewBox="0 0 144 144">
+  <!-- Resplandor ambiental futurista con blur -->
+  <div
+    class="absolute -inset-2 rounded-full bg-gradient-to-tr from-cyan-500/20 via-indigo-500/15 to-purple-500/25 blur-xl opacity-50 group-hover:opacity-100 transition-opacity duration-500"
+  >
+  </div>
+
+  <!-- Anillo SVG barra de progreso circular con degradado estilo Vercel -->
+  <svg
+    class="relative inset-0 size-full -rotate-90 pointer-events-none z-10"
+    viewBox="0 0 144 144"
+  >
     <defs>
-      <linearGradient id="avatar-progress-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#f59e0b" />
-        <stop offset="30%" stop-color="#ec4899" />
-        <stop offset="70%" stop-color="#8b5cf6" />
-        <stop offset="100%" stop-color="#3b82f6" />
+      <linearGradient
+        id="avatar-futuristic-gradient"
+        x1="0%"
+        y1="0%"
+        x2="100%"
+        y2="100%"
+      >
+        <stop offset="0%" stop-color="#00dfd8"></stop>
+        <stop offset="35%" stop-color="#007cf0"></stop>
+        <stop offset="70%" stop-color="#7928ca"></stop>
+        <stop offset="100%" stop-color="#ff0080"></stop>
       </linearGradient>
     </defs>
 
-    <!-- Pista de fondo de la barra -->
+    <!-- Pista de fondo translúcida -->
     <circle
       cx="72"
       cy="72"
       r="66"
-      stroke="currentColor"
-      stroke-width="3"
-      fill="none"
-      class="text-neutral-200 dark:text-neutral-800 transition-colors duration-300"
-    />
+      stroke="rgba(255, 255, 255, 0.07)"
+      stroke-width="2.5"
+      fill="none"></circle>
 
-    <!-- Barra de progreso degradada animada -->
+    <!-- Barra de progreso futurista animada -->
     <circle
       cx="72"
       cy="72"
       r="66"
-      stroke="url(#avatar-progress-gradient)"
-      stroke-width="3.5"
+      stroke="url(#avatar-futuristic-gradient)"
+      stroke-width="3"
       stroke-linecap="round"
       fill="none"
       stroke-dasharray="415"
       stroke-dashoffset="415"
       class="progress-ring-circle transition-all duration-700 ease-out"
-    />
+    ></circle>
   </svg>
 
-  <!-- Imagen del Avatar -->
-  <div class="size-30 overflow-hidden rounded-full ring-2 ring-white dark:ring-[#0c0d0e] shadow-md transition-transform duration-300 group-hover:scale-105">
+  <!-- Imagen del Avatar con marco de vidrio frosted -->
+  <div
+    class="absolute size-28 overflow-hidden rounded-full border border-white/10 bg-white/[0.02] backdrop-blur-xl shadow-2xl transition-transform duration-300 group-hover:scale-105 z-0"
+  >
     <img
       class="w-full h-full object-cover"
       src="/devestevenson.jpg"
@@ -54,7 +70,6 @@
     animation: fillProgress 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
 
-  /* Animación de carga: simula que la barra se va llenando hasta el 82% */
   @keyframes fillProgress {
     0% {
       stroke-dashoffset: 415;
@@ -64,9 +79,8 @@
     }
   }
 
-  /* Al pasar el cursor se llena al 100% con un ligero resplandor */
   .group:hover .progress-ring-circle {
     stroke-dashoffset: 0;
-    filter: drop-shadow(0 0 6px rgba(236, 72, 153, 0.4));
+    filter: drop-shadow(0 0 8px rgba(0, 223, 216, 0.5));
   }
 </style>

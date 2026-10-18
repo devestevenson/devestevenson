@@ -1,28 +1,24 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
-
 html {
-    background-color: #ffffff;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-html.dark {
-    background-color: #0c0d0e;
+    background-color: #000000;
     color-scheme: dark;
+    color: #ededed;
 }
 
 body {
     font-family: 'DM Sans Variable', sans-serif;
-    color: #000000;
+    background-color: #000000;
+    color: #ededed;
     min-height: 100vh;
-    transition: color 0.3s ease;
+    overflow-x: hidden;
 }
 
-html.dark body {
-    color: #ededed;
+::selection {
+    background-color: #ffffff;
+    color: #000000;
 }
 
 ::-webkit-scrollbar {
     display: none;
-}
+}
