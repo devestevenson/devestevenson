@@ -1,14 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Menu from "../components/Menu.astro";
 import Avatar from "../components/Avatar.astro";
 import Footbar from "../components/Footbar.astro";
-import Menu from "../components/Menu.astro";
 ---
 
 <Layout>
-  <main
-    class="min-h-screen flex flex-col justify-between items-center px-4 py-8 md:py-12 max-w-2xl mx-auto text-center relative z-10"
-  >
+  <main class="min-h-screen flex flex-col justify-between items-center px-4 py-8 md:py-12 max-w-2xl mx-auto text-center relative z-10">
     <!-- Menú superior futurista centrado -->
     <header class="w-full flex justify-center items-center">
       <Menu />
@@ -19,25 +17,12 @@ import Menu from "../components/Menu.astro";
       <Avatar />
 
       <div class="space-y-3">
-        <h1
-          class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-neutral-400"
-        >
-          Saludos, soy <span
-            class="font-bold bg-gradient-to-r from-[#00ff88] to-[#059669] bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(0,255,136,0.35)]"
-            >devestevenson</span
-          >
-        </h1>
-        <h2
-          class="text-xl sm:text-2xl md:text-3xl font-light text-neutral-400 tracking-tight"
-        >
-          UX Designer &amp; Digital Product Creator
-        </h2>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-neutral-100">Saludos, soy devestevenson</h1>
+        <h2 class="text-xl sm:text-2xl md:text-3xl font-light text-neutral-400 tracking-tight">UX Designer &amp; Digital Product Creator</h2>
       </div>
 
       <!-- Botones de proyectos estilo Vercel limpios con Glassmorphism, Blur y Transparencia sin degradado -->
-      <div
-        class="flex flex-wrap justify-center items-center gap-3 sm:gap-4 pt-2"
-      >
+      <div class="flex flex-wrap justify-center items-center gap-3 sm:gap-4 pt-2">
         <a
           href="https://www.hopino.online/"
           target="_blank"

@@ -1,72 +1,10 @@
 ---
 ---
 
-<div class="relative size-36 mx-auto flex items-center justify-center">
-  <!-- Anillo SVG barra de progreso circular con degradado de solo 2 tonos verdes -->
-  <svg
-    class="relative inset-0 size-full -rotate-90 pointer-events-none z-10"
-    viewBox="0 0 144 144"
-  >
-    <defs>
-      <linearGradient
-        id="avatar-futuristic-gradient"
-        x1="0%"
-        y1="0%"
-        x2="100%"
-        y2="100%"
-      >
-        <stop offset="0%" stop-color="#00ff88"></stop>
-        <stop offset="100%" stop-color="#059669"></stop>
-      </linearGradient>
-    </defs>
-
-    <!-- Pista de fondo translúcida -->
-    <circle
-      cx="72"
-      cy="72"
-      r="66"
-      stroke="rgba(255, 255, 255, 0.07)"
-      stroke-width="2.5"
-      fill="none"></circle>
-
-    <!-- Barra de progreso circular con degradado de 2 tonos -->
-    <circle
-      cx="72"
-      cy="72"
-      r="66"
-      stroke="url(#avatar-futuristic-gradient)"
-      stroke-width="3"
-      stroke-linecap="round"
-      fill="none"
-      stroke-dasharray="415"
-      stroke-dashoffset="415"
-      class="progress-ring-circle"
-    ></circle>
-  </svg>
-
-  <!-- Imagen del Avatar con marco de vidrio frosted sin efecto hover -->
+<div class="relative size-28 sm:size-32 mx-auto flex items-center justify-center">
+  <!-- Imagen del Avatar con marco de vidrio frosted y borde sutil como los demás botones -->
   <div
-    class="absolute size-28 overflow-hidden rounded-full border border-white/10 bg-white/[0.02] backdrop-blur-xl shadow-2xl z-0"
-  >
-    <img
-      class="w-full h-full object-cover"
-      src="/devestevenson.jpg"
-      alt="Foto de perfil de devestevenson"
-    />
+    class="size-full overflow-hidden rounded-full border p-2 border-b-neutral-300">
+    <img class="w-full h-full object-cover rounded-full" src="/devestevenson.jpg" alt="Foto de perfil de devestevenson"/>
   </div>
 </div>
-
-<style>
-  .progress-ring-circle {
-    animation: fillProgress 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  }
-
-  @keyframes fillProgress {
-    0% {
-      stroke-dashoffset: 415;
-    }
-    100% {
-      stroke-dashoffset: 75;
-    }
-  }
-</style>
