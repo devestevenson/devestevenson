@@ -4,30 +4,14 @@ import "@fontsource-variable/dm-sans";
 ---
 
 <!doctype html>
-<html lang="es" class="dark">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>Estevenson — UX Designer & Digital Product Creator</title>
+    <title>devestevenson — UX Designer & Digital Product Creator</title>
   </head>
-  <body
-    class="bg-black text-[#ededed] min-h-screen relative overflow-x-hidden selection:bg-white selection:text-black"
-  >
-    <!-- Fondo futurista estilo Vercel: resplandor ambiental + micro-grid con máscara radial -->
-    <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
-      <!-- Resplandor superior sutil -->
-      <div
-        class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] md:w-[1000px] h-[400px] bg-gradient-to-b from-indigo-500/15 via-purple-500/5 to-transparent blur-[140px] rounded-full"
-      >
-      </div>
-      <!-- Rejilla futurista con desvanecimiento radial suave -->
-      <div
-        class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:36px_36px] [mask-image:radial-gradient(ellipse_75%_55%_at_50%_0%,#000_65%,transparent_100%)]"
-      >
-      </div>
-    </div>
-
+  <body class="min-h-screen selection:bg-white selection:text-black">
     <slot />
   </body>
 </html>
