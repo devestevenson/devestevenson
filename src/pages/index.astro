@@ -23,7 +23,7 @@ import Menu from "../components/Menu.astro";
           class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-neutral-400"
         >
           Saludos, soy <span
-            class="font-bold bg-gradient-to-r from-[#00dfd8] via-[#007cf0] to-[#7928ca] bg-clip-text text-transparent drop-shadow-[0_0_35px_rgba(0,124,240,0.35)]"
+            class="font-bold bg-gradient-to-r from-[#00ff88] to-[#059669] bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(0,255,136,0.35)]"
             >devestevenson</span
           >
         </h1>
@@ -34,7 +34,7 @@ import Menu from "../components/Menu.astro";
         </h2>
       </div>
 
-      <!-- Botones de proyectos estilo Vercel con Glassmorphism, Blur y Transparencia -->
+      <!-- Botones de proyectos estilo Vercel limpios con Glassmorphism, Blur y Transparencia sin degradado -->
       <div
         class="flex flex-wrap justify-center items-center gap-3 sm:gap-4 pt-2"
       >
@@ -42,87 +42,66 @@ import Menu from "../components/Menu.astro";
           href="https://www.hopino.online/"
           target="_blank"
           rel="noopener noreferrer"
-          class="group relative inline-flex items-center justify-center rounded-full p-[1px] transition-all duration-300 hover:scale-[1.03]"
+          class="group relative inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white/[0.04] hover:bg-white/[0.08] backdrop-blur-xl border border-white/10 hover:border-white/25 text-neutral-200 hover:text-white font-medium text-sm sm:text-base tracking-wide transition-all duration-300 shadow-[0_4px_25px_-5px_rgba(0,0,0,0.6)] hover:scale-[1.03]"
         >
-          <span
-            class="absolute -inset-0.5 rounded-full bg-gradient-to-r from-cyan-500/30 via-indigo-500/20 to-purple-500/30 blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          ></span>
-          <span
-            class="relative px-6 py-2.5 rounded-full bg-white/[0.04] hover:bg-white/[0.08] backdrop-blur-xl border border-white/[0.1] hover:border-white/[0.28] text-neutral-200 hover:text-white font-medium text-sm sm:text-base tracking-wide transition-all duration-300 flex items-center gap-2 shadow-[0_4px_25px_-5px_rgba(0,0,0,0.6)]"
+          Hopino
+          <svg
+            class="size-3.5 text-neutral-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
           >
-            Hopino
-            <svg
-              class="size-3.5 text-neutral-500 group-hover:text-cyan-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
-            </svg>
-          </span>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
+          </svg>
         </a>
 
         <a
           href="https://www.guiaty.com/"
           target="_blank"
           rel="noopener noreferrer"
-          class="group relative inline-flex items-center justify-center rounded-full p-[1px] transition-all duration-300 hover:scale-[1.03]"
+          class="group relative inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white/[0.04] hover:bg-white/[0.08] backdrop-blur-xl border border-white/10 hover:border-white/25 text-neutral-200 hover:text-white font-medium text-sm sm:text-base tracking-wide transition-all duration-300 shadow-[0_4px_25px_-5px_rgba(0,0,0,0.6)] hover:scale-[1.03]"
         >
-          <span
-            class="absolute -inset-0.5 rounded-full bg-gradient-to-r from-cyan-500/30 via-indigo-500/20 to-purple-500/30 blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          ></span>
-          <span
-            class="relative px-6 py-2.5 rounded-full bg-white/[0.04] hover:bg-white/[0.08] backdrop-blur-xl border border-white/[0.1] hover:border-white/[0.28] text-neutral-200 hover:text-white font-medium text-sm sm:text-base tracking-wide transition-all duration-300 flex items-center gap-2 shadow-[0_4px_25px_-5px_rgba(0,0,0,0.6)]"
+          Guiaty
+          <svg
+            class="size-3.5 text-neutral-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
           >
-            Guiaty
-            <svg
-              class="size-3.5 text-neutral-500 group-hover:text-cyan-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
-            </svg>
-          </span>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
+          </svg>
         </a>
 
         <a
           href="https://poem-five-kappa.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
-          class="group relative inline-flex items-center justify-center rounded-full p-[1px] transition-all duration-300 hover:scale-[1.03]"
+          class="group relative inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white/[0.04] hover:bg-white/[0.08] backdrop-blur-xl border border-white/10 hover:border-white/25 text-neutral-200 hover:text-white font-medium text-sm sm:text-base tracking-wide transition-all duration-300 shadow-[0_4px_25px_-5px_rgba(0,0,0,0.6)] hover:scale-[1.03]"
         >
-          <span
-            class="absolute -inset-0.5 rounded-full bg-gradient-to-r from-cyan-500/30 via-indigo-500/20 to-purple-500/30 blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          ></span>
-          <span
-            class="relative px-6 py-2.5 rounded-full bg-white/[0.04] hover:bg-white/[0.08] backdrop-blur-xl border border-white/[0.1] hover:border-white/[0.28] text-neutral-200 hover:text-white font-medium text-sm sm:text-base tracking-wide transition-all duration-300 flex items-center gap-2 shadow-[0_4px_25px_-5px_rgba(0,0,0,0.6)]"
+          Pohemaro
+          <svg
+            class="size-3.5 text-neutral-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
           >
-            Pohemaro
-            <svg
-              class="size-3.5 text-neutral-500 group-hover:text-cyan-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
-            </svg>
-          </span>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
+          </svg>
         </a>
       </div>
     </div>

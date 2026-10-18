@@ -1,15 +1,8 @@
 ---
-
 ---
 
-<div class="relative size-36 mx-auto flex items-center justify-center group">
-  <!-- Resplandor ambiental futurista con blur -->
-  <div
-    class="absolute -inset-2 rounded-full bg-gradient-to-tr from-cyan-500/20 via-indigo-500/15 to-purple-500/25 blur-xl opacity-50 group-hover:opacity-100 transition-opacity duration-500"
-  >
-  </div>
-
-  <!-- Anillo SVG barra de progreso circular con degradado estilo Vercel -->
+<div class="relative size-36 mx-auto flex items-center justify-center">
+  <!-- Anillo SVG barra de progreso circular con degradado de solo 2 tonos verdes -->
   <svg
     class="relative inset-0 size-full -rotate-90 pointer-events-none z-10"
     viewBox="0 0 144 144"
@@ -22,10 +15,8 @@
         x2="100%"
         y2="100%"
       >
-        <stop offset="0%" stop-color="#00dfd8"></stop>
-        <stop offset="35%" stop-color="#007cf0"></stop>
-        <stop offset="70%" stop-color="#7928ca"></stop>
-        <stop offset="100%" stop-color="#ff0080"></stop>
+        <stop offset="0%" stop-color="#00ff88"></stop>
+        <stop offset="100%" stop-color="#059669"></stop>
       </linearGradient>
     </defs>
 
@@ -38,7 +29,7 @@
       stroke-width="2.5"
       fill="none"></circle>
 
-    <!-- Barra de progreso futurista animada -->
+    <!-- Barra de progreso circular con degradado de 2 tonos -->
     <circle
       cx="72"
       cy="72"
@@ -49,13 +40,13 @@
       fill="none"
       stroke-dasharray="415"
       stroke-dashoffset="415"
-      class="progress-ring-circle transition-all duration-700 ease-out"
+      class="progress-ring-circle"
     ></circle>
   </svg>
 
-  <!-- Imagen del Avatar con marco de vidrio frosted -->
+  <!-- Imagen del Avatar con marco de vidrio frosted sin efecto hover -->
   <div
-    class="absolute size-28 overflow-hidden rounded-full border border-white/10 bg-white/[0.02] backdrop-blur-xl shadow-2xl transition-transform duration-300 group-hover:scale-105 z-0"
+    class="absolute size-28 overflow-hidden rounded-full border border-white/10 bg-white/[0.02] backdrop-blur-xl shadow-2xl z-0"
   >
     <img
       class="w-full h-full object-cover"
@@ -77,10 +68,5 @@
     100% {
       stroke-dashoffset: 75;
     }
-  }
-
-  .group:hover .progress-ring-circle {
-    stroke-dashoffset: 0;
-    filter: drop-shadow(0 0 8px rgba(0, 223, 216, 0.5));
   }
 </style>
